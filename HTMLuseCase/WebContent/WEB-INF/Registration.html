@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Form</title>
+<style type="text/css">
+h2{
+text-align: center;
+text-decoration: underline;
+font-family: calibri;
+}
+form{
+background-color: lightgray;
+
+}
+div{
+
+padding: 2px 0 8px 15px;
+
+}
+
+input[type=text], input[type=email],input[type=number]{
+width:60%;
+padding: 10px;
+margin: 5px 0 20px 0;
+}
+
+label{
+font-weight: bold;
+font-family: calibri;
+}
+button{
+width:10%;
+padding: 10px;}
+</style>
+</head>
+<body>
+	<form action="#">
+	<div>
+	<h2>Registration Form</h2>
+	
+		<label>Name:</label><br>
+			
+			<input type="text" placeholder="Enter yout Name"><br>
+		<label>Email ID :</label><br>
+			<input type="email" placeholder="Enter your email ID"><br>
+		
+
+		<label>Contact No :</label><br>
+			<input type="number" placeholder="Enter your contact No"><br>
+		
+
+		<label>Gender :</label><br>
+			<input type="radio" name="gender" value="male">Male
+			 <input type="radio" name="gender"
+				value="female">Female<br><br>
+			
+
+		<label>Marital Status :</label><br>
+			<input type="radio" name="status" value="Yes">Married
+			 <input type="radio" name="status"
+				value="No">Not Married<br><br>
+
+		<label>Country:</label>
+			<select>
+					<option value="India">India</option>
+					<option value="Australia">Australia</option>
+					<option value="Korea">Korea</option>
+					<option value="SriLanka">Sri Lanka</option>
+					<option value="NewZealand">New Zealand</option>
+			</select><br><br>
+
+		
+			<label>Programming Languages Known:</label><br>
+			<input type="checkbox" id="Java" name="Java" value="Java" />Java<br> 
+			<input type="checkbox" id="Python" name="Python" value="Python" />Python<br> 
+			<input type="checkbox" id="PHP" name="PHP" value="PHP" />PHP<br><br>
+	
+	<button type="submit">Register</button><br>
+	</div>
+	</form>
+</body>
+</html>
