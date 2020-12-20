@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Usecase</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover({
+            placement : 'top'
+        });
+    });
+
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+</script>
+  <style>
+  .one{
+    padding: 15px;
+        font-size: 18px;
+        background: #dbdfe5;
+        margin-bottom: 15px;
+  }
+  .two{
+    padding: 15px;
+        font-size: 18px;
+        background: rgb(201, 127, 127);
+        margin-bottom: 15px;
+}
+
+.carousel{
+    background: #2f4357;
+    margin-top: 20px;
+}
+.carousel-item{
+    text-align: center;
+    height: 350px; 
+    width: 1000;
+}
+.navEg{
+    margin: 20px;
+}
+.pop-example{
+    	margin: 50px 50px;
+    }
+
+    .pro-example{
+        margin: 20px;        
+    }
+    
+    .progress{
+        margin-bottom: 1rem;
+    }
+
+    .tool-example{
+    	margin: 100px 60px;
+    }
+    .spin{
+        margin: 15px;
+    }    
+</style>
+</head>
+<body>
+<h3>Grid System</h3>
+<div class="container">
+  <div class="row">
+      <div class=".col-md-8">
+          <div class="one">Column One</div> </div>
+      <div class=".col-md-8">
+          <div class="two">Column Two</div>
+          </div>
+      
+  </div>
+</div>
+<h4>Breadcrumb</h4>
+<div class="container">
+<ul class="breadcrumb">
+    <li class="breadcrumb-item"><a href="#">Home</a></li>
+    <li class="breadcrumb-item"><a href="#">About</a></li>
+    <li class="breadcrumb-item"><a href="#">History</a></li>
+    <li class="breadcrumb-item"><a href="#">Contact Us</a></li>
+</ul>
+</div>
+
+<h4>Cards</h4>
+<div class="container">
+<div class="card text-white bg-primary sm-4">
+<div class="card-body">
+    <div class="card-title">
+        <h5>Card Title</h5>
+        <div class="card-text">
+            <p>This is card body text example</p>
+        </div>
+    </div>
+</div>
+</div>
+<div class="card text-white bg-success sm-4">
+    <div class="card-body">
+        <div class="card-title">
+            <h5>Card Title</h5>
+            <div class="card-text">
+                <p>This is card body text example</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<h4>Carousel</h4>
+<div class="container">
+<div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        
+      </ul>
+
+      <div id="demo1" class="carousel-inner">
+        <div class="carousel-item active" >
+            <img src="C:\Users\EZHILARASI\Pictures\Saved Pictures\tree-736885__340.webp" >
+            
+        </div>
+        <div class="carousel-item" style="height: 200;">
+            <img src="C:\Users\EZHILARASI\Pictures\Saved Pictures\72975551.webp"  >
+        </div>
+        
+      </div>
+
+      <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+</div>
+</div>
+<br>
+<h4>Collapse</h4>
+<div id="accordion">
+<div class="card">
+    <div class="card-header">
+      <a class="card-link" data-toggle="collapse" href="#collapseOne">
+        Collapse  Item 1
+      </a>
+    </div>
+    <div id="collapseOne" class="collapse show" data-parent="#accordion">
+      <div class="card-body">
+        Like an ego in the forest.....
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      <a class="card-link" data-toggle="collapse" href="#collapseTwo">
+        Collapse  Item 2
+      </a>
+    </div>
+    <div id="collapseTwo" class="collapse show" data-parent="#accordion">
+      <div class="card-body">
+        Like an arrow in the bluesky.....
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<h4>Modal</h4>
+
+<div class="container">
+    <h2>Modal Example</h2>
+    <!-- Button to Open the Modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+      Open modal
+    </button>
+  
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+        
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          
+          
+          <div class="modal-body">
+            Do you want to save the form?
+          </div>
+          
+          
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <br>
+  <br>
+
+  <h4>Navbar</h4>
+<div class="navEg">
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+            <a href="#" class="nav-item nav-link active">Home</a>
+            <a href="#" class="nav-item nav-link">About</a>
+            <a href="#" class="nav-item nav-link">Products</a>
+        </div>
+        <form class="form-inline ml-auto">
+            <input type="text" class="form-control mr-sm-2" placeholder="Search">
+            <button type="submit" class="btn btn-outline-light">Search</button>
+        </form>
+    </div>
+</nav>
+</div>
+
+<br>
+<br>
+<h4>Pagination</h4>
+
+<ul class="pagination justify-content-center">
+    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+  </ul>
+
+  <br><br>
+  <h4>Popover</h4>
+
+  <div class="pop-example">
+    <div class="popover-demo mb-2">
+        <button type="button" class="btn btn-primary" data-toggle="popover" title="Popover title" data-content="Default popover">Popover</button>
+        <button type="button" class="btn btn-success" data-toggle="popover" title="Popover title" data-content="Another popover">Another popover</button>
+        <button type="button" class="btn btn-warning" data-toggle="popover" title="Popover title" data-content="The last popover!">Last popover</button>
+    </div>
+	<p><strong>Note:</strong> Click on the buttons to display/hide the popover.</p>
+</div>
+<br><br>
+
+<h4>ProgressBar</h4>
+
+<div class="container">
+    
+    <div class="pro-example">
+        <div class="progress">
+            <div class="progress-bar" style="width: 25%">25%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" style="width: 50%">50%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" style="width: 75%">75%</div>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" style="width: 100%">100%</div>
+        </div>
+    </div>
+  </div>
+  
+  <br>
+
+  <h4>ToolTip</h4>
+  <div class="tool-example"> 
+    <ul class="list-inline">
+        <li class="list-inline-item">
+            <a href="#" data-toggle="tooltip" title="Default tooltip">Tooltip</a>
+        </li>
+        <li class="list-inline-item">
+            <a href="#" data-toggle="tooltip" title="Another tooltip">Another tooltip</a>
+        </li>
+        
+        <li class="list-inline-item">
+            <a href="#" data-toggle="tooltip" title="The last tip!">Last tooltip</a>
+        </li>
+    </ul>
+</div>
+
+<br><br>
+
+<h4>Spinner</h4>
+<div class="spin">
+<div class="spinner-border text-primary">
+    <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-border text-secondary">
+    <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-border text-success">
+    <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-border text-danger">
+    <span class="sr-only">Loading...</span>
+</div>
+<div class="spinner-border text-warning">
+    <span class="sr-only">Loading...</span>
+</div>
+</div>
+<br>
+<br>
+
+</body>
+</html>
